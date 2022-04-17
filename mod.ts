@@ -17,7 +17,7 @@ async function handler(_req: Request): Promise<Response> {
 
     return new Response(mp3.body, {
       status: mp3.status,
-      headers: { "content-type": "audio/mp3" },
+      headers: { "content-type": "audio/mp3", "Cache-Control": "max-age=1800" },
     });
   }
 
